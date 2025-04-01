@@ -1,5 +1,6 @@
-import { arqueiro } from "./arqueiro.js";
+import { Arqueiro } from "./arqueiro.js";
 import Personagem from "./personagem.js";
+import { Mago} from "./mago.js";
 
 export class ArqueiroMago extends Personagem {
   ladoArqueiro;
