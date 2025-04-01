@@ -1,15 +1,22 @@
-import  Personagem  from "./personagem.js";
+import Personagem from "./personagem.js";
 
 export class Mago extends Personagem {
   elementoMagico;
-  levalMago;
+  levelMagico;
   inteligencia;
   tipo = "Mago";
 
-  coconstructor(nome, level, elementoMagico, levalMago, inteligencia) {
-    supe(nome, level);
+  constructor(nome, level, elementoMagico, levelMagico, inteligencia) {
+    super(nome, level);
     this.elementoMagico = elementoMagico;
-    this.levalMago = levalMago;
+    this.levelMagico = levelMagico;
     this.inteligencia = inteligencia;
+  }
+
+  obeterInsignia(){
+    if(this.levelMagico >= 5 && this.inteligencia >= 5){
+      return `Mestre do ${this.elementoMagico}`
+    }
+    return super.obeterInsignia()
   }
 }

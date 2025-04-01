@@ -4,10 +4,11 @@ export default class Personagem {
   mana = 100
   level;
   tipo;
+  descricao;
 
-  constructor(nome, vida) {
+  constructor(nome, level) {
     this.nome = nome;
-    this.vida = vida;
+    this.level = level;
   }
 
   obeterInsignia() {
